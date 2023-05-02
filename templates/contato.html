@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Contato - Leandro Félix</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='verificate.svg') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="overflow-hidden flex flex-col justify-center items-center z-10">
+    <div class="z-10 h-full w-full items-center justify-center">
+      <!-- Header -->
+      <header class="fixed left-0">
+        <a
+          href="https://github.com/lehinfo-felix"
+          class="flex items-center justify-center w-full px-16 text-white mt-16"
+          target="_blank"
+        >
+          <div class="flex items-center">
+            <img
+              src="https://avatars.githubusercontent.com/u/58048297"
+              class="w-12 h-12 rounded-full"
+              alt="foto de perfil"
+            />
+            <h3 class="font-bold px-2">Leandro Felix</h3>
+            <img
+              src="{{ url_for('static', filename='verificate.svg') }}"
+              alt="verificate icon"
+              class="w-6 text-white"
+            />
+          </div>
+        </a>
+      </header>
+
+      <!-- Main -->
+      <main class="w-full flex flex-col items-center justify-center h-full">
+        <div class="flex flex-row my-8">
+          <div class="bg-purple-400 w-1"></div>
+          <h1 class="text-3xl font-bold text-zinc-100 ml-4">Contato</h1>
+        </div>
+        <section class="text-center text-white text-xl">
+          <div class="mt-12">
+            <div>
+              <div class="flex items-center mb-8">
+                <i class="uil uil-phone text-3xl text-purple-600"></i>
+                <div class="ml-3">
+                  <h3 class="text-left">Ligue</h3>
+                  <a href="tel:88996782112 " class="text-md">
+                    <span class="text-zinc-400">(88) 99678-2112</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-8">
+                <i class="uil uil-envelope text-3xl text-purple-600"></i>
+                <div class="ml-3">
+                  <h3 class="text-left">Email</h3>
+                  <a href="mailto:leandro.felix.ar@gmail.com" class="">
+                    <span class="text-zinc-400">leandro.felix.ar@gmail.com</span>
+                  </a>
+                </div>
+              </div class="ml-3">
+              <div class="flex items-center">
+                <i class="uil uil-map-marker text-3xl text-purple-600"></i>
+                <div class="ml-3">
+                  <h3 class="text-left">Localização</h3>
+                  <a
+                    href="https://www.google.com/maps/@-6.5997872,-39.0554832,21z"
+                    class=""
+                  >
+                    <span class="text-zinc-400">Alameda José Quintino, 300</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer navigation -->
+      <nav class="text-white fixed bottom-6 w-full flex justify-center">
+        <ul class="flex justify-between">
+          <li
+            class="border-transparent font-bold px-2 border-b-4 ease-in-out transition-all mx-4 hover:border-purple-500"
+          >
+            <a href="/">
+              <i class="uil uil-estate text-xl"></i>
+            </a>
+          </li>
+          <li
+            class="px-2 border-b-4 border-transparent ease-in-out transition-all mx-4 hover:border-purple-500"
+          >
+            <a href="/sobre">
+              <i class="uil uil-info-circle text-xl"></i>
+            </a>
+          </li>
+          <li
+            class="px-2 border-b-4 border-transparent ease-in-out transition-all mx-4 hover:border-purple-500"
+          >
+            <a href="/formacao">
+              <i class="uil uil-graduation-cap text-xl border-purple-700"></i>
+            </a>
+          </li>
+          <li
+            class="border-transparent px-2 border-b-4 ease-in-out transition-all mx-4 hover:border-purple-500"
+          >
+            <a href="/experiencia">
+              <i class="uil uil-bag-alt text-xl"></i>
+            </a>
+          </li>
+
+          <li
+            class="px-2 border-b-4 border-purple-700 ease-in-out transition-all mx-4 hover:border-purple-500"
+          >
+            <a href="/contato">
+              <i class="uil uil-navigator text-xl"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="w-full h-full z-0">
+      <img
+        src="{{ url_for('static', filename='blur1.svg') }}"
+        alt=""
+        class="fixed bottom-0 left-0"
+      />
+      <img
+        src="{{ url_for('static', filename='blur2.svg') }}"
+        alt=""
+        class="fixed top-0 right-0"
+      />
+    </div>
+
+    <script>
+      const body = document.querySelector("body");
+      body.style = `
+      background-image: '{{ url_for('static', filename='blur1.svg') }}';
+        background-color: #0e141b;
+        font-family: 'Inter', sans-serif;
+       `;
+
+      var mySwiper = new Swiper(".swiper-container", {
+        loop: true,
+        autoplay: {
+          delay: 2000,
+        },
+      });
+    </script>
+  </body>
+</html>
