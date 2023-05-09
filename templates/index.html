@@ -1,36 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <title>Portfólio - Leandro Félix</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link
-      rel="shortcut icon"
-      href="{{ url_for('static', filename='verificate.svg') }}"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-  </head>
+{% extends "base.html" %}
+{% block main %}
   <body class="overflow-hidden flex flex-col justify-center">
     <div class="main z-10">
       <!-- Header -->
@@ -202,77 +171,5 @@
           </div>
         </div>
       </div>
-
-      <!-- Footer navigation -->
-      <nav class="text-white fixed bottom-6 w-full flex justify-center">
-        <ul class="flex justify-between">
-          <li
-            class="border-purple-700 font-bold px-2 border-b-4 ease-in-out transition-all mx-4"
-          >
-            <a href="/">
-              <i class="uil uil-estate text-xl"></i>
-            </a>
-          </li>
-          <li
-            class="px-2 border-b-4 border-transparent ease-in-out transition-all mx-4 hover:border-purple-500"
-          >
-            <a href="/sobre">
-              <i class="uil uil-info-circle text-xl"></i>
-            </a>
-          </li>
-          <li
-            class="px-2 border-b-4 border-transparent ease-in-out transition-all mx-4 hover:border-purple-500"
-          >
-            <a href="/formacao">
-              <i class="uil uil-graduation-cap text-xl"></i>
-            </a>
-          </li>
-          <li
-            class="px-2 border-b-4 border-transparent ease-in-out transition-all mx-4 hover:border-purple-500"
-          >
-            <a href="/experiencia">
-              <i class="uil uil-bag-alt text-xl"></i>
-            </a>
-          </li>
-
-          <li
-            class="px-2 border-b-4 border-transparent ease-in-out transition-all mx-4 hover:border-purple-500"
-          >
-            <a href="/contato">
-              <i class="uil uil-navigator text-xl"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
-
-    <div class="w-full h-full z-0">
-      <img
-        src="{{ url_for('static', filename='blur1.svg') }}"
-        alt=""
-        class="fixed bottom-0 left-0"
-      />
-      <img
-        src="{{ url_for('static', filename='blur2.svg') }}"
-        alt=""
-        class="fixed top-0 right-0"
-      />
-    </div>
-
-    <script>
-      const body = document.querySelector("body");
-      body.style = `
-      background-image: '{{ url_for('static', filename='blur1.svg') }}';
-        background-color: #0e141b;
-        font-family: 'Inter', sans-serif;
-       `;
-
-      var mySwiper = new Swiper(".swiper-container", {
-        loop: true,
-        autoplay: {
-          delay: 2000,
-        },
-      });
-    </script>
-  </body>
-</html>
+{% endblock %}
